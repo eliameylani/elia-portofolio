@@ -1,0 +1,1832 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elia Meylani Simanjuntak | Data Analyst Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --ink:#182338;
+    --muted:#69758a;
+    --cream:#f7f5ef;
+    --paper:#fffdf9;
+    --navy:#1d2942;
+    --blue:#5267d8;
+    --lav:#e9e9ff;
+    --line:#e5e2da;
+    --shadow:0 24px 70px rgba(31,42,67,.10)
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"DM Sans",sans-serif
+}
+
+a{
+    text-decoration:none;
+    color:inherit
+}
+
+/* NAVBAR */
+.nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1160px,calc(100% - 32px));
+    z-index:20;
+    background:rgba(255,253,249,.86);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(229,226,218,.9);
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(31,42,67,.07)
+}
+
+.navin{
+    padding:13px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+}
+
+.brand{
+    font-family:"Plus Jakarta Sans";
+    font-weight:800;
+    font-size:16px
+}
+
+.brand span{color:var(--blue)}
+
+.links{
+    display:flex;
+    gap:24px;
+    font-size:13px;
+    color:var(--muted);
+    font-weight:600
+}
+
+.links a:hover{color:var(--blue)}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    max-width:1240px;
+    margin:auto;
+    padding:150px 34px 90px;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
+    align-items:center
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border-radius:999px;
+    background:var(--lav);
+    color:#4f5bc0;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.08em
+}
+
+.dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#6c79e8
+}
+
+.hero h1{
+    font-family:"Plus Jakarta Sans";
+    font-size:clamp(48px,6.2vw,82px);
+    line-height:1.02;
+    letter-spacing:-.065em;
+    margin:22px 0 18px;
+    max-width:720px
+}
+
+.hero h1 em{
+    font-style:normal;
+    color:var(--blue)
+}
+
+.hero-copy{
+    font-size:17px;
+    line-height:1.75;
+    color:var(--muted);
+    max-width:650px
+}
+
+.cta{
+    display:flex;
+    gap:11px;
+    flex-wrap:wrap;
+    margin-top:28px
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 17px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:var(--paper);
+    font-size:13px;
+    font-weight:800;
+    transition:.2s
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+.btn.primary{
+    background:var(--navy);
+    color:#fff;
+    border-color:var(--navy)
+}
+
+/* HERO PHOTO */
+.visual{position:relative}
+
+.photo-card{
+    position:relative;
+    overflow:hidden;
+    background:#ddd;
+    border-radius:34px;
+    box-shadow:var(--shadow);
+    transform:rotate(2deg)
+}
+
+.photo-card img{
+    display:block;
+    width:100%;
+    height:570px;
+    object-fit:cover
+}
+
+.photo-overlay{
+    position:absolute;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    padding:17px 19px;
+    border-radius:18px;
+    background:rgba(255,253,249,.90);
+    backdrop-filter:blur(12px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+
+.photo-overlay strong{
+    font-family:"Plus Jakarta Sans";
+    font-size:14px
+}
+
+.photo-overlay span{
+    font-size:12px;
+    color:var(--muted)
+}
+
+.shape{
+    position:absolute;
+    width:130px;
+    height:130px;
+    border-radius:35px;
+    background:#dfe1ff;
+    right:-38px;
+    top:-40px;
+    z-index:-1
+}
+
+.shape2{
+    position:absolute;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#e8dfd2;
+    left:-35px;
+    bottom:55px;
+    z-index:-1
+}
+
+/* STATS */
+.stats{
+    max-width:1240px;
+    margin:-15px auto 0;
+    padding:0 34px 70px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px
+}
+
+.stat{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:22px
+}
+
+.stat b{
+    display:block;
+    font-family:"Plus Jakarta Sans";
+    font-size:25px;
+    letter-spacing:-.04em
+}
+
+.stat span{
+    font-size:12px;
+    color:var(--muted)
+}
+
+/* SECTION */
+section.content{
+    max-width:1240px;
+    margin:auto;
+    padding:100px 34px
+}
+
+.section-label{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.16em;
+    color:var(--blue);
+    text-transform:uppercase;
+    margin-bottom:10px
+}
+
+.section-title{
+    font-family:"Plus Jakarta Sans";
+    font-size:clamp(32px,4vw,50px);
+    letter-spacing:-.055em;
+    margin:0 0 14px
+}
+
+.section-desc{
+    color:var(--muted);
+    line-height:1.7;
+    max-width:620px
+}
+
+/* ABOUT */
+.about-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:24px;
+    margin-top:35px
+}
+
+.panel{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:26px;
+    padding:30px;
+    box-shadow:0 10px 35px rgba(31,42,67,.04)
+}
+
+.panel p{
+    color:var(--muted);
+    line-height:1.75
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:20px
+}
+
+.tag{
+    padding:9px 12px;
+    background:#f0eee8;
+    border-radius:10px;
+    font-size:12px;
+    font-weight:700
+}
+
+/* PROJECT */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    margin-top:38px
+}
+
+.project{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:27px;
+    overflow:hidden;
+    transition:.25s;
+    box-shadow:0 10px 35px rgba(31,42,67,.04)
+}
+
+.project:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow)
+}
+
+.project-cover{
+    height:230px;
+    padding:25px;
+    display:flex;
+    align-items:flex-end;
+    background:linear-gradient(135deg,#202c48,#6877d9)
+}
+
+.project:nth-child(2) .project-cover{
+    background:linear-gradient(135deg,#283f46,#8db5ad)
+}
+
+.project:nth-child(3) .project-cover{
+    background:linear-gradient(135deg,#49344b,#a88ec4)
+}
+
+.cover-label{
+    padding:8px 11px;
+    border-radius:9px;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.08em
+}
+
+.project-body{padding:25px}
+
+.project h3{
+    font-family:"Plus Jakarta Sans";
+    font-size:22px;
+    letter-spacing:-.03em;
+    margin:0 0 10px
+}
+
+.project p{
+    color:var(--muted);
+    line-height:1.7;
+    font-size:14px
+}
+
+.project-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:22px;
+    font-size:11px;
+    color:var(--muted)
+}
+
+.project-link{
+    font-weight:800;
+    color:var(--blue);
+    border:0;
+    background:none;
+    cursor:pointer
+}
+
+/* TIMELINE */
+.timeline{
+    margin-top:38px;
+    display:grid;
+    gap:18px
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:28px;
+    padding:27px 0;
+    border-top:1px solid var(--line)
+}
+
+.timeline-date{
+    font-size:12px;
+    color:var(--muted);
+    font-weight:700
+}
+
+.timeline h3{
+    font-family:"Plus Jakarta Sans";
+    margin:0 0 7px;
+    font-size:19px
+}
+
+.timeline p,
+.timeline li{
+    color:var(--muted);
+    line-height:1.7;
+    font-size:14px
+}
+
+.timeline ul{
+    margin:12px 0 0;
+    padding-left:18px
+}
+
+/* ORGANIZATION */
+.org-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:38px
+}
+
+.org{
+    padding:24px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:22px
+}
+
+.org-number{
+    font-size:11px;
+    color:var(--blue);
+    font-weight:800
+}
+
+.org h3{
+    font-family:"Plus Jakarta Sans";
+    margin:12px 0 7px;
+    font-size:18px
+}
+
+.org p{
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.6
+}
+
+/* CERTIFICATE */
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:38px
+}
+
+.cert{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:22px;
+    transition:.25s
+}
+
+.cert:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow)
+}
+
+.cert-icon{
+    height:110px;
+    border-radius:15px;
+    background:#eeedf9;
+    display:grid;
+    place-items:center;
+    color:var(--blue);
+    font-family:"Plus Jakarta Sans";
+    font-size:27px;
+    font-weight:800
+}
+
+.cert h3{
+    font-size:15px;
+    margin:17px 0 6px
+}
+
+.cert p{
+    font-size:12px;
+    color:var(--muted)
+}
+
+.cert-link{
+    display:inline-flex;
+    margin-top:12px;
+    padding:9px 12px;
+    border-radius:10px;
+    background:var(--navy);
+    color:#fff;
+    font-size:11px;
+    font-weight:800
+}
+
+.cert-link:hover{
+    transform:translateY(-2px)
+}
+
+/* PHOTO GALLERY */
+.photo-strip{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:28px
+}
+
+.photo-strip img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    border-radius:18px;
+    border:1px solid var(--line);
+    box-shadow:0 10px 30px rgba(31,42,67,.06);
+    transition:.25s
+}
+
+.photo-strip img:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow)
+}
+
+/* CONTACT */
+.contact{
+    background:var(--navy);
+    color:#fff;
+    border-radius:30px;
+    padding:52px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px
+}
+
+.contact .section-label{
+    color:#aeb7ff
+}
+
+.contact h2{
+    font-family:"Plus Jakarta Sans";
+    font-size:38px;
+    letter-spacing:-.05em;
+    margin:0 0 10px
+}
+
+.contact p{
+    color:#c6ccda;
+    line-height:1.6;
+    margin:0;
+    max-width:560px
+}
+
+.contact .btn{
+    background:#fff;
+    color:var(--navy);
+    border-color:#fff
+}
+
+/* MODAL */
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:50;
+    background:rgba(15,23,42,.58);
+    backdrop-filter:blur(10px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:24px
+}
+
+.modal.open{
+    display:flex
+}
+
+.modal-box{
+    width:min(850px,100%);
+    max-height:88vh;
+    overflow:auto;
+    background:var(--paper);
+    border-radius:28px;
+    padding:34px;
+    box-shadow:0 30px 90px rgba(0,0,0,.22);
+    position:relative
+}
+
+.modal-close{
+    position:absolute;
+    right:20px;
+    top:18px;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:#eeeae3;
+    color:var(--navy);
+    font-size:20px;
+    cursor:pointer
+}
+
+.modal-kicker{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.13em;
+    color:var(--blue)
+}
+
+.modal h2{
+    font-family:"Plus Jakarta Sans";
+    font-size:34px;
+    letter-spacing:-.05em;
+    margin:9px 45px 12px 0
+}
+
+.modal p,
+.modal li{
+    color:var(--muted);
+    line-height:1.75;
+    font-size:14px
+}
+
+.modal-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-top:24px
+}
+
+.modal-card{
+    padding:18px;
+    border-radius:17px;
+    background:#f2f0ea
+}
+
+.modal-card strong{
+    display:block;
+    color:var(--navy);
+    margin-bottom:5px
+}
+
+footer{
+    padding:35px;
+    text-align:center;
+    color:var(--muted);
+    font-size:12px
+}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+
+    .links{
+        display:none
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:130px;
+        gap:45px
+    }
+
+    .photo-card{
+        transform:none
+    }
+
+    .photo-card img{
+        height:480px
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr)
+    }
+
+    .about-grid,
+    .project-grid{
+        grid-template-columns:1fr
+    }
+
+    .org-grid,
+    .cert-grid{
+        grid-template-columns:1fr
+    }
+
+    .timeline-item{
+        grid-template-columns:1fr;
+        gap:7px
+    }
+
+    .contact{
+        padding:35px;
+        display:block
+    }
+
+    .contact .cta{
+        margin-top:22px
+    }
+}
+
+@media(max-width:520px){
+
+    .hero,
+    .stats,
+    section.content{
+        padding-left:20px;
+        padding-right:20px
+    }
+
+    .hero h1{
+        font-size:47px
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr
+    }
+
+    .photo-card img{
+        height:420px
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="navin">
+
+        <a class="brand" href="#home">
+            Elia <span>Meylani</span>
+        </a>
+
+        <div class="links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#organization">Organization</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#skills">Skills</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<main id="home">
+
+<!-- HERO -->
+<section class="hero">
+
+    <div>
+
+        <span class="eyebrow">
+            <i class="dot"></i>
+            DATA SCIENCE GRADUATE
+        </span>
+
+        <h1>
+            Hi, I'm Elia Meylani Simanjuntak.<br>
+            I turn <em>data</em> into meaningful insights.
+        </h1>
+
+        <p class="hero-copy">
+            Fresh graduate in Data Science from Institut Teknologi Sumatera (ITERA), interested in data analytics, business intelligence, reporting, and structured problem-solving.
+        </p>
+
+        <div class="cta">
+
+            <a class="btn primary" href="#projects">
+                Explore My Work ↗
+            </a>
+
+            <a class="btn"
+               href="https://www.linkedin.com/in/elia-meylani"
+               target="_blank">
+                LinkedIn
+            </a>
+
+            <a class="btn"
+               href="https://github.com/eliameylani"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a class="btn"
+               href="https://www.instagram.com/meylanielia"
+               target="_blank">
+                Instagram
+            </a>
+
+            <a class="btn"
+               href="https://mail.google.com/mail/?view=cm&fs=1&to=meylanielia4@gmail.com"
+               target="_blank">
+                Email
+            </a>
+
+            <a class="btn"
+               href="ELIA MEYLANI SIMANJUNTAK_CV.pdf"
+               target="_blank">
+                CV
+            </a>
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="visual">
+
+        <div class="shape"></div>
+        <div class="shape2"></div>
+
+        <div class="photo-card">
+
+            <img
+                src="DSCF9712.JPG"
+                alt="Foto Elia Meylani Simanjuntak"
+            >
+
+            <div class="photo-overlay">
+
+                <div>
+                    <strong>
+                        Elia Meylani Simanjuntak
+                    </strong>
+
+                    <br>
+
+                    <span>
+                        Data Analyst · Fresh Graduate
+                    </span>
+                </div>
+
+                <span>2026</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+<div class="stats">
+
+    <div class="stat">
+        <b>3.01</b>
+        <span>GPA / 4.00</span>
+    </div>
+
+    <div class="stat">
+        <b>3+</b>
+        <span>Data Projects</span>
+    </div>
+
+    <div class="stat">
+        <b>400K+</b>
+        <span>Monthly Records</span>
+    </div>
+
+    <div class="stat">
+        <b>200+</b>
+        <span>Daily Records</span>
+    </div>
+
+</div>
+
+
+<!-- ABOUT --> 
+
+<section class="content" id="about"> 
+
+<div class="section-label"> 
+    01 · About 
+</div> 
+
+<h2 class="section-title"> 
+    A data-focused profile with practical experience. 
+</h2> 
+
+<p class="section-desc"> 
+    I enjoy working with structured data, building clear reports, 
+    and turning analytical results into information that is easy 
+    to understand. 
+</p> 
+
+<div class="about-grid"> 
+
+    <div class="panel"> 
+
+        <h3>Profile</h3> 
+
+        <p> 
+            My background combines a Data Science education with practical 
+            experience in operational data and reporting during my internship 
+            at PT PLN (Persero). My academic projects include dashboarding, 
+            forecasting, survey analysis, and machine learning. 
+        </p>
+
+        <div class="panel" id="skills">
+
+            <h3>Technical Skills</h3>
+
+            <div class="tags">
+                <span class="tag">Excel</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Tableau</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">R / RStudio</span>
+            </div>
+
+            <h3 style="margin-top:30px;">Soft Skills</h3>
+
+            <div class="tags">
+                <span class="tag">Analytical Thinking</span>
+                <span class="tag">Problem Solving</span>
+                <span class="tag">Attention to Detail</span>
+                <span class="tag">Communication</span>
+                <span class="tag">Teamwork</span>
+                <span class="tag">Time Management</span>
+            </div>
+
+        </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section class="content" id="projects">
+
+    <div class="section-label">
+        02 · Selected Work
+    </div>
+
+    <h2 class="section-title">
+        Projects that show how I work with data.
+    </h2>
+
+    <p class="section-desc">
+        Three selected projects showcasing business intelligence, 
+        forecasting, and machine learning. 
+    </p>
+
+
+    <div class="project-grid">
+
+        <!-- PROJECT 1 -->
+        <article class="project">
+
+            <div class="project-cover">
+                <span class="cover-label">
+                    01 · POWER BI
+                </span>
+            </div>
+
+            <div class="project-body">
+
+                <h3>
+                    Quick-Commerce Sales Dashboard
+                </h3>
+
+                <p>
+                    Built an interactive dashboard covering revenue,
+                    transactions, users, AOV, and conversion to monitor
+                    sales performance.
+                </p>
+
+                <div class="project-meta">
+
+                    <span>
+                        Power BI · Excel
+                    </span>
+
+                    <button
+                        class="project-link"
+                        onclick="openModal('modal2')"
+                        style="font: inherit; color: inherit; background: none; border: none; padding: 0; cursor: pointer;">
+                        View project →
+                    </button>
+
+                    <a
+                        class="project-link"
+                        href="https://app.powerbi.com/groups/me/reports/584c6cbd-f667-4d90-aad3-1bbe1b7e7e72/648d4ec2ad001c0ee10d?experience=power-bi"
+                        target="_blank"
+                        style="font: inherit; color: inherit; text-decoration: none;">
+                        View Dashboard →
+                    </a>
+
+                </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project">
+
+            <div class="project-cover">
+                <span class="cover-label">
+                    02 · FORECASTING
+                </span>
+            </div>
+
+            <div class="project-body">
+
+                <h3>
+                    Electricity Demand Forecasting
+                </h3>
+
+                <p>
+                    Forecasted electricity demand for DKI Jakarta using
+                    SARIMA and evaluated model performance with MAPE.
+                </p>
+
+            <div class="project-meta">
+
+                <span>
+                    Python · SARIMA
+                </span>
+
+                <button
+                    class="project-link"
+                    onclick="openModal('modal3')"
+                    style="font: inherit; color: inherit; background: none; border: none; padding: 0; cursor: pointer;">
+                    View project →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+        <article class="project">
+
+            <div class="project-cover">
+                <span class="cover-label">
+                    03 · MACHINE LEARNING
+                </span>
+            </div>
+
+            <div class="project-body">
+
+                <h3>
+                    Bacterial Taxonomy Classification
+                </h3>
+
+                <p>
+                    Classified bacterial taxonomy using k-mer features,
+                    dimensionality reduction, KNN, and Gaussian Naive Bayes.
+                </p>
+
+            <div class="project-meta">
+
+                <span>
+                    Python · k-mer · KNN
+                </span>
+
+                <button
+                    class="project-link"
+                    onclick="openModal('modal4')"
+                    style="font: inherit; color: inherit; background: none; border: none; padding: 0; cursor: pointer;">
+                    View project →
+                </button>
+
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECT 1 MODAL -->
+<div class="modal"
+     id="modal2"
+     onclick="closeOutside(event,'modal2')">
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('modal2')">
+            ×
+        </button>
+
+        <span class="modal-kicker">
+            01 · BUSINESS INTELLIGENCE
+        </span>
+
+        <h2>
+            Quick-Commerce Sales Dashboard
+        </h2>
+
+        <p>
+            Interactive Power BI dashboard for monitoring sales
+            and customer performance.
+        </p>
+
+
+        <div class="photo-strip" style="
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        ">
+
+            <img
+                src="Tugas Analitik Bisnis.jpg"
+                alt="Quick-Commerce Dashboard 1"
+                style="
+                    width:100%;
+                    height:200px;
+                    object-fit:cover;
+                    border-radius:20px;
+                ">
+
+            <img
+                src="KPI.jpg"
+                alt="Quick-Commerce Dashboard 2"
+                style="
+                    width:100%;
+                    height:200px;
+                    object-fit:cover;
+                    border-radius:20px;
+                ">
+
+        </div>
+        <div class="modal-grid">
+
+            <div class="modal-card">
+                <strong>Revenue</strong>
+                IDR 773M+
+            </div>
+
+            <div class="modal-card">
+                <strong>Transactions</strong>
+                9,537 transactions
+            </div>
+
+            <div class="modal-card">
+                <strong>Users</strong>
+                2,538 users
+            </div>
+
+            <div class="modal-card">
+                <strong>Metrics</strong>
+                AOV 81.01K · Conversion 1.00%
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PROJECT 2 MODAL -->
+<div class="modal"
+     id="modal3"
+     onclick="closeOutside(event,'modal3')">
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('modal3')">
+            ×
+        </button>
+
+        <span class="modal-kicker">
+            02 · FORECASTING
+        </span>
+
+        <h2>
+            Electricity Demand Forecasting
+        </h2>
+
+        <p>
+            Forecasting electricity demand in DKI Jakarta
+            for the 2017–2022 period.
+        </p>
+
+
+        <div class="photo-strip">
+
+            <img
+                src="time series.png"
+                alt="Electricity Forecasting 1"
+                style="
+                    width:100%;
+                    height:150px;
+                    object-fit:cover;
+                    border-radius:20px;
+                ">
+
+            <img
+                src="model.png"
+                alt="Electricity Forecasting 2"
+                style="
+                    width:100%;
+                    height:150px;
+                    object-fit:cover;
+                    border-radius:20px;
+                ">
+
+            <img
+                src="forecast.png"
+                alt="Electricity Forecasting 3"
+                style="
+                    width:100%;
+                    height:150px;
+                    object-fit:cover;
+                    border-radius:20px;
+                ">
+
+        </div>
+
+        <div class="modal-grid">
+
+            <div class="modal-card">
+                <strong>Model</strong>
+                SARIMA
+            </div>
+
+            <div class="modal-card">
+                <strong>Tools</strong>
+                Python · Pandas · Matplotlib
+            </div>
+
+            <div class="modal-card">
+                <strong>Period</strong>
+                2017–2022
+            </div>
+
+            <div class="modal-card">
+                <strong>Evaluation</strong>
+                MAPE 3.98%
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PROJECT 3 MODAL -->
+<div class="modal"
+     id="modal4"
+     onclick="closeOutside(event,'modal4')">
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('modal4')">
+            ×
+        </button>
+
+        <span class="modal-kicker">
+            03 · MACHINE LEARNING
+        </span>
+
+        <h2>
+            Bacterial Taxonomy Classification
+        </h2>
+
+        <p>
+            Classification of bacterial taxonomy from SILVA SSU Ref NR
+            Bacteria sequences.
+        </p>
+
+
+        <div class="photo-strip">  
+
+            <img   
+                src="IPCA.png"   
+                alt="Bacterial Classification 1"
+                style="
+                    width:100%;  
+                    height:150px;  
+                    object-fit:contain;  
+                    border-radius:20px;
+                "
+            >  
+
+            <img   
+                src="KMER.png"   
+                alt="Bacterial Classification 2"
+                style="
+                    width:100%;  
+                    height:150px;  
+                    object-fit:contain;  
+                    border-radius:20px;
+                "
+            >  
+
+            <img   
+                src="KNN VS GNB.png"   
+                alt="Bacterial Classification 3"
+                style="
+                    width:100%;  
+                    height:150px;  
+                    object-fit:contain;  
+                    border-radius:20px;
+                "
+            >  
+
+        </div>
+
+        <div class="modal-grid">
+
+            <div class="modal-card">
+                <strong>Features</strong>
+                k-mer k=6 · 4,096 features
+            </div>
+
+            <div class="modal-card">
+                <strong>Reduction</strong>
+                IPCA · 1,823 components · 90% CEV
+            </div>
+
+            <div class="modal-card">
+                <strong>Split</strong>
+                70% train · 10% validation · 20% test
+            </div>
+
+            <div class="modal-card">
+                <strong>Models</strong>
+                KNN · Gaussian Naive Bayes
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- EXPERIENCE -->
+<section class="content" id="experience">
+
+    <div class="section-label">
+        03 · Experience
+    </div>
+
+    <h2 class="section-title">
+        Professional experience.
+    </h2>
+
+    <p class="section-desc">
+        Practical exposure to data processing, reporting,
+        administration, and operational support.
+    </p>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                JUN — JUL 2025
+                <br>
+                PT PLN (Persero)
+            </div>
+
+            <div>
+
+                <h3>
+                    Data & Reporting Intern · UID Lampung
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Input and validated 200+ operational/customer
+                        records daily using Excel and an internal
+                        web application.
+                    </li>
+
+                    <li>
+                        Organized 400,000+ monthly records from multiple
+                        UP/ULP units for performance reporting and
+                        monthly meetings.
+                    </li>
+
+                    <li>
+                        Supported administrative documentation and
+                        inter-division correspondence.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3 FOTO MAGANG -->
+    <div class="photo-strip">
+
+        <img
+            src="Dokumentasi Magang.jpeg"
+            alt="Pengalaman magang Elia 1">
+
+        <img
+            src="magang 2.jpeg"
+            alt="Pengalaman magang Elia 2">
+
+        <img
+            src="magang 3.jpeg"
+            alt="Pengalaman magang Elia 3">
+
+    </div>
+
+</section>
+
+
+<!-- ORGANIZATION -->
+<section class="content" id="organization">
+
+    <div class="section-label">
+        04 · Organization
+    </div>
+
+    <h2 class="section-title">
+        Beyond technical skills.
+    </h2>
+
+    <p class="section-desc">
+        Organizational experiences that strengthened communication,
+        teamwork, coordination, and responsibility.
+    </p>
+
+
+    <div class="org-grid">
+
+        <div class="org">
+
+            <span class="org-number">
+                01
+            </span>
+
+            <h3>
+                HMSD ITERA
+            </h3>
+
+            <p>
+                <strong>Sponsorship Staff</strong>
+                <br>
+                Mar 2024 — Jan 2025
+                <br>
+                25+ external partners · ~80% sponsorship target
+            </p>
+
+        </div>
+
+
+        <div class="org">
+
+            <span class="org-number">
+                02
+            </span>
+
+            <h3>
+                PMK ITERA
+            </h3>
+
+            <p>
+                <strong>Department Secretary</strong>
+                <br>
+                Feb 2024 — Mar 2025
+                <br>
+                Administrative and documentation support
+            </p>
+
+        </div>
+
+
+        <div class="org">
+
+            <span class="org-number">
+                03
+            </span>
+
+            <h3>
+                Dies Natalis Data Science
+            </h3>
+
+            <p>
+                <strong>Head of Event Management Subdivision</strong>
+                <br>
+                Mar — May 2024
+                <br>
+                Event planning and team coordination
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3 FOTO ORGANISASI -->
+        <div class="photo-strip" style="
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-top:28px;
+">
+
+    <img 
+        src="DSCF1354.JPG" 
+        alt="Kegiatan organisasi Elia 1"
+        style="
+            width:100%;
+            height:250px;
+            object-fit:cover;
+            border-radius:20px;
+        "
+    >
+
+    <img 
+        src="PMK ITERA.jpeg" 
+        alt="Kegiatan organisasi Elia 2"
+        style="
+            width:100%;
+            height:430px;
+            object-fit:cover;
+            border-radius:20px;
+        "
+    >
+
+    <img 
+        src="IMG_5728.JPG" 
+        alt="Kegiatan organisasi Elia 3"
+        style="
+            width:100%;
+            height:250px;
+            object-fit:cover;
+            border-radius:20px;
+        "
+    >
+
+</div>
+
+
+<!-- CERTIFICATES -->
+<section class="content" id="certificates">
+
+    <div class="section-label">
+        05 · Credentials
+    </div>
+
+    <h2 class="section-title">
+        Certificates & training.
+    </h2>
+
+    <p class="section-desc">
+        Selected learning experiences that support my analytics skill set.
+    </p>
+
+
+    <div class="cert-grid">
+
+        <!-- CERTIFICATE 1 -->
+        <div class="cert">
+
+            <div class="cert-icon">
+                DA
+            </div>
+
+            <h3>
+                Data Analyst Training
+            </h3>
+
+            <p>
+                Yureka Education Center · 2026
+            </p>
+
+            <a
+                class="cert-link"
+                href="https://drive.google.com/drive/folders/1nMDIPcWq1Z4TCy1U1m4WeiblBYHhySCI?usp=sharing"
+                target="_blank">
+                View Certificate ↗
+            </a>
+
+        </div>
+
+
+        <!-- CERTIFICATE 2 -->
+        <div class="cert">
+
+            <div class="cert-icon">
+                613
+            </div>
+
+            <h3>
+                TOEFL
+            </h3>
+
+            <p>
+                Score 613 · 2026
+            </p>
+
+            <a
+                class="cert-link"
+                href="https://drive.google.com/drive/folders/1XBvAVisGyL--z-awUKEpU6RmI8Ht2t0j?usp=sharing"
+                target="_blank">
+                View Certificate ↗
+            </a>
+
+        </div>
+
+
+        <!-- CERTIFICATE 3 -->
+        <div class="cert">
+
+            <div class="cert-icon">
+                ML
+            </div>
+
+            <h3>
+                Machine Learning Algorithms
+            </h3>
+
+            <p>
+                UI Data Science Center · 2023
+            </p>
+
+            <a
+                class="cert-link"
+                href="https://drive.google.com/drive/folders/1RppNhxbuRd7dObO585FbcywHhRXqrCgM?usp=sharing"
+                target="_blank">
+                View Certificate ↗
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3 FOTO SERTIFIKAT -->
+     <!-- 3 FOTO SERTIFIKAT -->
+<div class="photo-strip">
+
+    <img 
+        src="YEC.jpg" 
+        alt="Sertifikat Elia 1"
+        style="
+            width:100%;
+            height:250px;
+            object-fit:cover;
+            border-radius:20px;
+        "
+    >
+
+    <img 
+        src="English.jpg" 
+        alt="Sertifikat Elia 2"
+        style="
+            width:100%;
+            height:250px;
+            object-fit:cover;
+            border-radius:20px;
+        "
+    >
+
+    <img 
+        src="DSC.jpg" 
+        alt="Sertifikat Elia 3"
+        style="
+            width:100%;
+            height:250px;
+            object-fit:cover;
+            border-radius:20px;
+        "
+    >
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="content">
+
+    <div class="contact">
+
+        <div>
+
+            <div class="section-label">
+                082110923247 · Contact
+            </div>
+
+            <h2>
+                Let's work with data.
+            </h2>
+
+            <p>
+                Open to Data Analyst, Business Data Analyst,
+                BI Reporting, Business Analyst, System Analyst, and related opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="cta">
+
+            <a
+                class="btn"
+                href="mailto:meylanielia4@gmail.com">
+                Email me ↗
+            </a>
+
+            <a
+                class="btn"
+                href="https://www.linkedin.com/in/elia-meylani"
+                target="_blank">
+                LinkedIn ↗
+            </a>
+
+            <a class="btn"
+               href="https://www.instagram.com/meylanielia"
+               target="_blank">
+                Instagram ↗
+            </a>
+
+            <a class="btn"
+               href="https://mail.google.com/mail/?view=cm&fs=1&to=meylanielia4@gmail.com"
+               target="_blank">
+                Email ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+    © 2026 Elia Meylani Simanjuntak · Data Science Portfolio
+</footer>
+
+
+<script>
+
+function openModal(id){
+    document
+        .getElementById(id)
+        .classList
+        .add("open");
+
+    document.body.style.overflow="hidden";
+}
+
+function closeModal(id){
+    document
+        .getElementById(id)
+        .classList
+        .remove("open");
+
+    document.body.style.overflow="";
+}
+
+function closeOutside(event,id){
+
+    if(event.target === event.currentTarget){
+        closeModal(id);
+    }
+
+}
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key === "Escape"){
+
+        document
+            .querySelectorAll(".modal.open")
+            .forEach(function(modal){
+
+                closeModal(modal.id);
+
+            });
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
